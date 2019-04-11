@@ -52,7 +52,7 @@ class obra(models.Model):
 
 # Partitura ------------------------------------------------
 class partitura(models.Model):
-    paritura = models.CharField(max_length=200)
+    partitura = models.CharField(max_length=200)
     obra = models.ForeignKey(obra, default=None, null=False, blank=False)
     instrumento = models.ForeignKey(instrumento, default=None, null=False, blank=False)
     anotaciones = models.BooleanField(default=False)
@@ -63,7 +63,7 @@ class partitura(models.Model):
         verbose_name_plural = "Partituras"
 
     def __unicode__(self):
-        return self.paritura
+        return self.partitura
 
 # Tag -------------------------------------------------------
 class tag(models.Model):
