@@ -14,6 +14,7 @@ from glissando.models import compositor, instrumento, etiqueta, obra, partitura,
 def home(request):
 
 	obras = obra.objects.order_by('fecha')
+	# ejemplo inner join -> partituras = partitura.objects.select_related('obra')
 	context = {'las_obras': obras}
 	return render(request, 'glissando/home.html', context)
     

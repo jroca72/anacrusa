@@ -14,15 +14,13 @@
         <br /> {% if las_obras %}
         <div class="table-responsive">
             <table class="table table-striped table-light text-dark">
-                <th></th>
+                <th>Partituras</th>
                 <th>Obra</th>
                 <th>Compositor</th>
                 <th>Fecha</th>
                 {% for obra in las_obras %}
                 <tr>
-                    <td>
-                        <div class="termometro" id="{{ sensor.nombre_sensor }}"></div>
-                    </td>
+                    <td><a href="#" class="btn btn-primary">Partituras</a></td>
                     <td>{{ obra.obra }}</td>
                     <td>{{ obra.compositor }}</td>
                     <td>{{ obra.fecha }}</td>
@@ -31,7 +29,7 @@
             </table>
         </div>
         {% else %}
-        <p class="text-warning">Sin obras</p>
+        <p class="text-warning">Sin Obras</p>
         {% endif %}
     </div>
 </div>
