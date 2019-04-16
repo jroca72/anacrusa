@@ -17,4 +17,9 @@ def home(request):
 	# ejemplo inner join -> partituras = partitura.objects.select_related('obra')
 	context = {'las_obras': obras}
 	return render(request, 'glissando/home.html', context)
-    
+
+def partituras(request, id_obra):
+
+	partituras = partitura.objects.filter(obra = id_obra)
+	context = {'las_partituras': partituras}    
+	return render(request, 'glissando/partituras.html', context)

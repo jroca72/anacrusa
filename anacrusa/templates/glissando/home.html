@@ -20,7 +20,7 @@
                 <th>Fecha</th>
                 {% for obra in las_obras %}
                 <tr>
-                    <td><a href="#" class="btn btn-primary">Partituras</a></td>
+                    <td><a href="/partituras/{{obra.id}}/" class="btn btn-primary">Partituras</a></td>
                     <td>{{ obra.obra }}</td>
                     <td>{{ obra.compositor }}</td>
                     <td>{{ obra.fecha }}</td>

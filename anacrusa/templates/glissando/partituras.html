@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% load staticfiles %} {% block elcss %} {% endblock %}
+<!-- {% block titulo %}  {% endblock %} -->
+{% block content %}
+<br /><br />
+<div class="row">
+    <div class="col-md-12 col-lg-12">
+        <h3> Partituras </h3>
+        <br /> {% if las_partituras %}
+        <div class="table-responsive">
+            <table class="table table-striped table-light text-dark">
+                <th>Ver</th>
+                <th>Partituras</th>
+                <th>Obra</th>
+                <th>Compositor</th>
+                <th>Instrumento</th>
+                <th>Fecha</th>
+                <th>Anotaciones</th>
+                {% for partitura in las_partituras %}
+                <tr>
+                    <td><a href="/partituras/{{partitura.fichero}}/" class="btn btn-primary">Ver</a></td>
+                    <td>{{ partitura.partitura }}</td>
+                    <td>{{ partitura.obra }}</td>
+                    <td>{{ partitura.obra.compositor }}</td>
+                    <td>{{ partitura.instrumento }}</td>
+                    <td>{{ partitura.fecha }}</td>
+                    <td>{{ partitura.anotaciones }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        {% else %}
+        <p class="text-warning">Sin partituras</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
