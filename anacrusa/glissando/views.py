@@ -23,3 +23,5 @@ def partituras(request, id_obra):
 	partituras = partitura.objects.filter(obra = id_obra)
 	context = {'las_partituras': partituras}    
 	return render(request, 'glissando/partituras.html', context)
+
+

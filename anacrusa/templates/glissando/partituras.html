@@ -17,7 +17,7 @@
                 <th>Anotaciones</th>
                 {% for partitura in las_partituras %}
                 <tr>
-                    <td><a href="/partituras/{{partitura.fichero}}/" class="btn btn-primary">Ver</a></td>
+                    <td><a href="/media/{{partitura.fichero}}/" class="btn btn-primary">Ver</a></td>
                     <td>{{ partitura.partitura }}</td>
                     <td>{{ partitura.obra }}</td>
                     <td>{{ partitura.obra.compositor }}</td>
